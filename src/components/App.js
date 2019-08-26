@@ -6,6 +6,8 @@ import { apiKey } from '../private/private';
 
 // Component imports
 import Header from './Header/Header';
+import PhotoContent from './PhotoContent/PhotoContent';
+import Footer from './Footer/Footer';
 
 // Styles
 import './App.scss';
@@ -19,15 +21,8 @@ function App() {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(res => {
-        console.log(res.data, 'results');
-        setData({
-          date: res.data.date,
-          desc: res.data.explanation,
-          title: res.data.title,
-          media_type: res.data.media_type,
-          url: res.data.url,
-        });
-        console.log(data, 'data');
+        setData(res.data);
+        console.log(data);
       })
       .catch(err => {
         console.log(err);
@@ -37,6 +32,8 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <PhotoContent />
+      <Footer />
     </div>
   );
 }

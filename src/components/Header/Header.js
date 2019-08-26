@@ -8,7 +8,7 @@ import './header.scss';
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className='header-footer'>
       <img src={nasaLogo} alt='NASA' />
       <h1>NASA Photo of the Day</h1>
     </div>
