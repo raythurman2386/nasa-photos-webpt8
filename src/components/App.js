@@ -21,14 +21,12 @@ function App() {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(res => setData(res.data))
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(err => console.log(err));
   }, []);
 
   return (
     <div className='App'>
-      <Header />
+      <Header data={data} />
       <PhotoContent data={data} />
       <Footer />
     </div>
