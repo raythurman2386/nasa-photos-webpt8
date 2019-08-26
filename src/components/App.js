@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// import api key
+import { apiKey } from '../private/private';
+
 // Component imports
 
 // Styles
@@ -11,6 +14,16 @@ function App() {
   const [data, setData] = useState();
 
   // Here is where i'll put the useEffect when I get there
+  useEffect(() => {
+    axios
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
 
   return (
     <div className='App'>
