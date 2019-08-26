@@ -5,6 +5,7 @@ import axios from 'axios';
 import { apiKey } from '../private/private';
 
 // Component imports
+import Header from './Header/Header';
 
 // Styles
 import './App.scss';
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Header />
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!

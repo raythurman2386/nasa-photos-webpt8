@@ -1,12 +1,15 @@
 import React from 'react';
 
 // Import images for the header
-import Logo from '../../assets/nasa-logo';
+import nasaLogo from '../../assets/nasa-logo.svg';
+
+// Import stylesheet till I refactor
+import './header.scss';
 
 const Header = () => {
   return (
     <div>
-      <img src={Logo} alt='NASA' />
+      <img src={nasaLogo} alt='NASA' />
       <h1>Hello Header</h1>
     </div>
   );
