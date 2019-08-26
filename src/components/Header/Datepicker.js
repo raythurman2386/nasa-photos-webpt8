@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker';
 // datepicker styles
 import 'react-datepicker/dist/react-datepicker.css';
 
-const Date = () => {
+const Datepicker = () => {
   // Hook might need moved into the app component
   const [startDate, setStartDate] = useState(new Date());
 
@@ -19,4 +19,4 @@ const Date = () => {
   );
 };
 
-export default Date;
+export default Datepicker;
