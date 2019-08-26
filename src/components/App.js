@@ -18,8 +18,8 @@ function App() {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(res => {
-        setData(res.data);
-        console.log(data, 'data');
+        console.log(res, 'results');
+        // setData(res.data);
       })
       .catch(err => {
         console.log(err);
