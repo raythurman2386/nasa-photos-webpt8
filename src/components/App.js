@@ -20,12 +20,19 @@ function App() {
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(res => {
         console.log(res.data, 'results');
-        // setData(res.data);
+        setData({
+          date: res.data.date,
+          desc: res.data.explanation,
+          title: res.data.title,
+          media_type: res.data.media_type,
+          url: res.data.url,
+        });
+        console.log(data, 'data');
       })
       .catch(err => {
         console.log(err);
       });
-  }, [data]);
+  }, []);
 
   return (
     <div className='App'>
