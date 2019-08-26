@@ -5,7 +5,7 @@ import '../Header/header.scss';
 
 const Footer = () => {
   return (
-    <div className='header-footer bottom'>
+    <div className='header-footer'>
       <p>Designed by Ray Thurman</p>
     </div>
   );

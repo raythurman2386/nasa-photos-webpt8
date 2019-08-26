@@ -20,10 +20,7 @@ function App() {
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-      .then(res => {
-        setData(res.data);
-        console.log(data);
-      })
+      .then(res => setData(res.data))
       .catch(err => {
         console.log(err);
       });
@@ -32,7 +29,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <PhotoContent />
+      <PhotoContent data={data} />
       <Footer />
     </div>
   );
