@@ -1,5 +1,8 @@
 import React from 'react';
 
+//import styles
+import './photo.scss';
+
 const Description = ({ data }) => {
   return (
     <div>
