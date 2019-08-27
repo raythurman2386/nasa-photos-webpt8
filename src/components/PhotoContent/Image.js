@@ -3,7 +3,7 @@ import React from 'react';
 const Image = ({ data }) => {
   return (
     <div className='image-container'>
-      <img src={data.url} alt={data.title} />
+      <img className='main-img' src={data.url} alt={data.title} />
     </div>
   );
 };
