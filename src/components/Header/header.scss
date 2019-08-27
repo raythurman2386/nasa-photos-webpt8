@@ -2,4 +2,14 @@
   background-image: url('../../assets/starfield-banner.jpg');
   color: #fff;
   padding: 1rem 0;
+
+  .flexed-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.date-picker {
+  width: 6rem;
 }
