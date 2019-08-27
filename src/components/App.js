@@ -15,7 +15,6 @@ import './App.scss';
 function App() {
   // State hook for when I pull the data
   const [data, setData] = useState();
-  const [startDate, setStartDate] = useState(new Date());
   // const [url, newUrl] = useState(
   //   `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`,
   // );
@@ -23,14 +22,16 @@ function App() {
   // Here is where i'll put the useEffect when I get there
   useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+      .get(
+        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}?date="2019/08/27"`,
+      )
       .then(res => setData(res.data))
       .catch(err => console.log(err));
   }, []);
 
   return (
     <div className='App'>
-      <Header data={data} startDate={startDate} setStartDate={setStartDate} />
+      <Header data={data} />
       <PhotoContent data={data} />
       <Footer />
     </div>
