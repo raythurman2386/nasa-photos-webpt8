@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header data={data} />
+      <Header data={data} newUrl={newUrl} />
       <PhotoContent data={data} />
       <Footer />
     </div>
