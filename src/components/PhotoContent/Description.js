@@ -3,7 +3,7 @@ import React from 'react';
 const Description = ({ data }) => {
   return (
     <div>
-      <p>{data.explanation}</p>
+      <p className='description'>{data.explanation}</p>
     </div>
   );
 };
