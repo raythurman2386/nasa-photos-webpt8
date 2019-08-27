@@ -9,7 +9,7 @@ import Datepicker from './Datepicker';
 // Import stylesheet till I refactor
 import './header.scss';
 
-const Header = ({ data }) => {
+const Header = ({ data, newUrl }) => {
   // wait for the data before rendering
   if (!data)
     return (
@@ -25,7 +25,7 @@ const Header = ({ data }) => {
       <div className='flexed-header'>
         <img src={nasaLogo} alt='NASA' />
         <h1>NASA Photo of the Day</h1>
-        <Datepicker />
+        <Datepicker newUrl={newUrl} />
       </div>
       <h2>{data.title}</h2>
     </div>
