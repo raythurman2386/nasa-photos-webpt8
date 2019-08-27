@@ -13,9 +13,10 @@ const Header = ({ data }) => {
   // wait for the data before rendering
   if (!data)
     return (
-      <div className='header-footer'>
+      <div>
         <img src={nasaLogo} alt='NASA' />
         <h1>NASA Photo of the Day</h1>
+        <Datepicker />
       </div>
     );
 

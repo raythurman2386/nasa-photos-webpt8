@@ -10,8 +10,8 @@ const PhotoContent = ({ data }) => {
 
   return (
     <div className='photo-container'>
-      <Image />
-      <Description />
+      <Image data={data} />
+      <Description data={data} />
     </div>
   );
 };
