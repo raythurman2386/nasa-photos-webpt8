@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header data={data} />
+      <Header data={data} startDate={startDate} setStartDate={setStartDate} />
       <PhotoContent data={data} />
       <Footer />
     </div>
