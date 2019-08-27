@@ -22,10 +22,12 @@ const Header = ({ data }) => {
 
   return (
     <div className='header-footer'>
-      <img src={nasaLogo} alt='NASA' />
-      <h1>NASA Photo of the Day</h1>
+      <div className='flexed-header'>
+        <img src={nasaLogo} alt='NASA' />
+        <h1>NASA Photo of the Day</h1>
+        <Datepicker />
+      </div>
       <h2>{data.title}</h2>
-      <Datepicker />
     </div>
   );
 };
