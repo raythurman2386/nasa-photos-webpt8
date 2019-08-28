@@ -8,9 +8,9 @@ import { apiKey } from '../../private/private';
 // datepicker styles
 import 'react-datepicker/dist/react-datepicker.css';
 
-const Datepicker = ({ startDate, setStartDate, newUrl }) => {
+const Datepicker = ({ newUrl }) => {
   // Hook might need moved into the app component
-  // const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
 
   return (
     <DatePicker

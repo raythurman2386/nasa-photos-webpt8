@@ -19,9 +19,6 @@ function App() {
     `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`,
   );
 
-  // moving the hook for the date here
-  const [startDate, setStartDate] = useState(new Date());
-
   // Here is where i'll put the useEffect when I get there
   useEffect(() => {
     axios
@@ -32,12 +29,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header
-        data={data}
-        startDate={startDate}
-        setStartDate={setStartDate}
-        newUrl={newUrl}
-      />
+      <Header data={data} newUrl={newUrl} />
       <PhotoContent data={data} />
       <Footer />
     </div>
