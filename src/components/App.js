@@ -24,16 +24,16 @@ function App() {
 
   // Here is where i'll put the useEffect when I get there
   useEffect(() => {
-    if (startDate === '') {
-      axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-        .then(res => setData(res.data))
-        .catch(err => console.log(err));
-    } else {
+    if (startDate !== '') {
       axios
         .get(
           `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${startDate}`,
         )
+        .then(res => setData(res.data))
+        .catch(err => console.log(err));
+    } else {
+      axios
+        .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
         .then(res => setData(res.data))
         .catch(err => console.log(err));
     }
