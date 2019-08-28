@@ -1,4 +1,5 @@
 import React from 'react';
+import { Player } from 'video-react';
 
 const Image = ({ data }) => {
   // add the logic to display the videos

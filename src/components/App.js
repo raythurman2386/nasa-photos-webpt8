@@ -25,9 +25,7 @@ function App() {
   // Here is where i'll put the useEffect when I get there
   useEffect(() => {
     axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${startDate}`,
-      )
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
       .then(res => setData(res.data))
       .catch(err => console.log(err));
   }, [startDate]);
