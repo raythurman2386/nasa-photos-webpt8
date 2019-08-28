@@ -28,7 +28,7 @@ function App() {
       .get(url)
       .then(res => setData(res.data))
       .catch(err => console.log(err));
-  }, [startDate]);
+  }, [url]);
 
   return (
     <div className='App'>

@@ -21,7 +21,7 @@ const Datepicker = ({ startDate, setStartDate, newUrl }) => {
       onChange={date => {
         setStartDate(date);
         newUrl(
-          `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=date`,
+          `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${startDate}`,
         );
       }}
     />
