@@ -12,6 +12,12 @@ const Image = ({ data }) => {
         <img className='main-img' src={data.url} alt={data.title} />
       </div>
     );
+  } else {
+    return (
+      <Player>
+        <source src={data.url} />
+      </Player>
+    );
   }
 };
 
