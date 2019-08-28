@@ -12,7 +12,7 @@ const Datepicker = ({ startDate, setStartDate }) => {
   return (
     <DatePicker
       className='date-picker'
-      dateFormat='yyyy/MM/dd'
+      dateFormat='yyyy-MM-dd'
       todayButton='Today'
       selected={startDate}
       onChange={date => setStartDate(date)}
