@@ -3,6 +3,7 @@ import React from 'react';
 // Import Components
 import Image from './Image';
 import Description from './Description';
+import VideoPlayer from './VideoPlayer';
 
 const PhotoContent = ({ data }) => {
   // Wait for the data before returning anything
@@ -10,7 +11,12 @@ const PhotoContent = ({ data }) => {
 
   return (
     <div className='photo-container'>
-      <Image data={data} />
+      {data.media_type === 'video' ? (
+        <VideoPlayer data={data} />
+      ) : (
+        <Image data={data} />
+      )}
+
       <Description data={data} />
     </div>
   );
