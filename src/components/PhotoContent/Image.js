@@ -13,11 +13,7 @@ const Image = ({ data }) => {
       </div>
     );
   } else {
-    return (
-      <Player>
-        <source src={data.url} />
-      </Player>
-    );
+    return <Player src={data.url} />;
   }
 };
 
