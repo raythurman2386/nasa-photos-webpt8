@@ -10,6 +10,6 @@ const Image = ({ data }) => {
       <img className='main-img' src={data.url} alt={data.title} />
     </div>
   );
-
+};
 
 export default Image;
