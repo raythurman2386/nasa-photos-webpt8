@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
-const VideoPlayer = ({ data }) => {
-  return <ReactPlayer url={data.url} />;
+const VideoPlayer = props => {
+  return <ReactPlayer url={props.data.url} playing controls />;
 };
 
 export default VideoPlayer;
