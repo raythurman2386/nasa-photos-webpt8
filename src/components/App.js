@@ -20,11 +20,11 @@ function App() {
   // );
 
   // moving the hook for the date here
-  const [startDate, setStartDate] = useState('');
+  const [startDate, setStartDate] = useState(null);
 
   // Here is where i'll put the useEffect when I get there
   useEffect(() => {
-    if (startDate !== '') {
+    if (startDate !== null) {
       axios
         .get(
           `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${startDate}`,
